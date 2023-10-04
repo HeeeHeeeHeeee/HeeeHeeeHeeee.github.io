@@ -1,0 +1,281 @@
+body {
+    margin: 0 0.5rem;
+    display: flex;
+    flex-flow: column;
+    background-color: rgb(101,149,93);
+    color: black;
+    font-family: sans-serif;
+    -webkit-text-size-adjust: none;
+}
+
+header img {
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+}
+
+header img.logo {
+    margin-bottom: 10px;
+}
+
+nav:before {
+    content : "";
+    height: 1px;
+    width: 300px;
+    border-bottom: 1px solid black;
+    display: block;
+    margin: 10px auto;
+  }
+
+nav:after {
+    content : "";
+    height: 1px;
+    width: 250px;
+    border-top: 1px solid black;
+    display: block;
+    margin: 10px auto;
+  }
+
+nav ul {
+    list-style-type: none;
+    margin: 0 auto;
+    display: block;
+    width: fit-content;
+    max-width: 100%;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li:not(:last-child)::after {
+    display: inline-block;
+    color: #000;
+    content: '|';
+    padding: 0 3px 0 3px;
+}
+
+img.sample {
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+}
+
+img.screenshot {
+    float: left;
+    padding: 0 5px 5px 0;
+    width: 50%;
+    max-width: 706px;
+}
+
+.tiview {
+    margin: 0 auto 10px auto;
+    width: fit-content;
+}
+
+.filler {
+    flex: 1 1 auto;
+}
+
+footer:before {
+    content : "";
+    height: 1px;
+    min-height: 85px;
+    width: 80%;
+    border-bottom: 1px solid black;
+    display: block;
+    margin: 10px auto;
+}
+
+footer {
+    text-align: center;
+    padding-bottom: 5px;
+}
+
+a:link, a:visited {
+    color: rgb(230,230,230);
+    text-decoration: none;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+a:hover { text-decoration: underline; }
+
+a.mail {
+    white-space: nowrap;
+}
+
+pre {
+    width: fit-content;
+    margin: 0 auto 5px auto;
+    font-family: "Consolas", monospace;
+}
+
+.small {
+    text-align: center;
+    font-size: 9pt;
+}
+
+.centered {
+    text-align: center;
+}
+
+.centered img {
+    max-width: 33%;
+    height: auto;
+}
+
+img#preview {
+    max-width: 120px;
+    max-height: 120px;
+    height: auto;
+}
+
+td.previewtd {
+    height: 110px;
+}
+
+input[type=text]#characters {
+    width: 120px;
+}
+
+input[type=number]#width {
+    width: 50px;
+}
+
+input[type=submit] {
+    width: 105px;
+    height: 40px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+input[type=submit].ready {
+    box-shadow: #c3c3c3 0px -3px 6px 0px inset;
+}
+
+.forCheckbox {
+    display: inline-block;
+}
+
+p.tilink {
+    text-align: center;
+    padding-bottom: 0;
+}
+
+button#sharebutton {
+    width: 160px;
+    visibility: hidden;
+    display: inline-block;
+    opacity: 0;
+    transition: width 0.25s ease-out;
+}
+
+input[type=text]#sharetext {
+    width: 0px;
+    max-width: 90%;
+    visibility: hidden;
+    display: inline-block;
+    opacity: 0;
+    transition: width 0.25s ease-out;
+}
+
+span#check {
+    visibility: hidden;
+    display: inline-block;
+    position: relative;
+    left: -16px;
+    top: 1px;
+    color: rgb(101,149,93);
+    font-size: 13px;
+    width: 0px;
+}
+
+button#htmlbutton {
+    display: none;
+    float: right;
+    margin-left: 3px;
+}
+
+#viewsource {
+    display: none;
+}
+
+#viewsource textarea {
+    max-width: 90%;
+    width: 500px;
+    height: 100px;
+}
+
+html, body {
+    height: 100%;
+}
+
+@media screen and (min-width: 800px) {
+
+    main {
+        margin-left: calc(50vw - 768px/2 - 10px);
+        width: 768px;
+    }
+
+    header.img {
+        margin-left: calc(50vw - 500px/2 - 10px);
+    }
+
+    nav, header {
+        margin-left: calc(100vw - 100% - 10px);
+    }
+}
+
+@media screen and (min-width: 512px) and (max-width: 720px) {
+    input[type=file] {
+        max-width: 210px;
+    }
+
+    pre#tiresult {
+        font-size: calc(var(--fs)*0.75) !important;
+    }
+}
+
+@media screen and (max-width: 512px) {
+    input[type=file] {
+        max-width: 210px;
+    }
+
+    pre#tiresult {
+        font-size: calc(var(--fs)*0.5) !important;
+    }
+
+    button#htmlbutton {
+        display: none !important;
+    }    
+}
+
+@media screen and (max-width: 380px) {
+    input[type=file] {
+        max-width: 200px;
+    }
+
+    pre#tiresult {
+        font-size: calc(var(--fs)*0.39) !important;
+    }
+
+    .tilink {
+        font-size: 10pt;
+    }
+}
+
+.cc-window.cc-floating {
+    padding: 1em !important;
+    -webkit-transition: opacity 0.25s ease !important;
+    transition: opacity 0.25s ease !important;
+}
+
+@media screen and (max-width: 736px) {
+    .cc-window.cc-floating {
+        bottom: 0 !important;
+    }
+}
